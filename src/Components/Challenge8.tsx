@@ -3,13 +3,16 @@ import '../Styles/challenges.css';
 
 interface Challenge8Props {
     setIsVisible8: React.Dispatch<React.SetStateAction<boolean>>;
+    setIsVisible9: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Challenge1: React.FC<Challenge8Props> = ({
+const Challenge8: React.FC<Challenge8Props> = ({
     setIsVisible8,
+    setIsVisible9
 }) => {
     const handleChallenge8 = (): void => {
-        console.log('8');
+        setIsVisible8(false);
+        setIsVisible9(true);
     }
 
     const alertClick = () => {
@@ -19,13 +22,13 @@ const Challenge1: React.FC<Challenge8Props> = ({
     return (
         <div className='challenge-container'>
         <h2>Challenge 8</h2>
-        <button className="other8-btn" onClick={alertClick}>Click me!</button>
-        <button className="challenge8-btn-style" onClick={handleChallenge8}>Click me!</button>
+        <button className="btn other8-btn" onClick={alertClick}>Click me!</button>
+        <button className="btn challenge8-btn-style" onClick={handleChallenge8}>Click me!</button>
         </div>
     )
 }
 
-export default Challenge1;
+export default Challenge8;
 
 /*
 Megoldás: pointer-events: none; Kikapcsolása

@@ -15,7 +15,7 @@ const Challenge3: React.FC<Challenge3Props> = ({
   }
 
   return (
-    <div className='challenge-container'>
+    <div className='challenge-container challenge3-div'>
       <h2>Challenge3</h2>
       <div>
         <div>
@@ -46,8 +46,8 @@ const Challenge3: React.FC<Challenge3Props> = ({
                                                           <div>
                                                             <div>
                                                               <div>
-                                                                <div className="last-div">
-                                                                  <button className="challenge3-btn-style" onClick={handleChallenge3}>
+                                                                <div>
+                                                                  <button className="btn challenge3-btn-style" onClick={handleChallenge3}>
                                                                     Click me!
                                                                   </button>
                                                                 </div>

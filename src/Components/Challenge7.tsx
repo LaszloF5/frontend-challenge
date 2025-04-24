@@ -34,7 +34,7 @@ const Challenge7: React.FC<challenge7Props> = ({
         {buttons.map((num, i) => (
           <button
           ref={(el) => {buttonRefs.current[i] = el}}
-          className="challenge7-btn-style"
+          className="btn challenge7-btn-style"
           key={num}
           onClick={() => {
             if (i === 200) {

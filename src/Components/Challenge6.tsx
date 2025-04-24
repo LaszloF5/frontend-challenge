@@ -19,7 +19,7 @@ const Challenge6: React.FC<challenge6Props> = ({
         <div className='challenge-container'>
         <h2>Challenge 6</h2>
         <div className="challenge6-div">
-            <button className='challenge6-btn-style' onClick={handleChallenge6}>Click me!</button>
+            <button className='btn challenge6-btn-style' onClick={handleChallenge6}>Click me!</button>
             </div>
         </div>
     )

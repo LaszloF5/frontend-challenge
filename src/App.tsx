@@ -7,19 +7,19 @@ import Challenge5 from "./Components/Challenge5";
 import Challenge6 from "./Components/Challenge6";
 import Challenge7 from "./Components/Challenge7";
 import Challenge8 from "./Components/Challenge8";
+import Challenge9 from "./Components/Challenge9";
 import "./App.css";
 
 function App() {
   const [isVisible1, setIsVisible1] = useState<boolean>(true);
-  const [isVisible2, setIsVisible2] = useState<boolean>(false);
-  const [isVisible3, setIsVisible3] = useState<boolean>(false);
-  const [isVisible4, setIsVisible4] = useState<boolean>(false);
-  const [isVisible5, setIsVisible5] = useState<boolean>(false);
-  const [isVisible6, setIsVisible6] = useState<boolean>(false);
-  const [isVisible7, setIsVisible7] = useState<boolean>(false);
-  const [isVisible8, setIsVisible8] = useState<boolean>(false);
-  const [isVisible9, setIsVisible9] = useState<boolean>(false);
-  const [isVisible10, setIsVisible10] = useState<boolean>(true);
+  const [isVisible2, setIsVisible2] = useState<boolean>(true);
+  const [isVisible3, setIsVisible3] = useState<boolean>(true);
+  const [isVisible4, setIsVisible4] = useState<boolean>(true);
+  const [isVisible5, setIsVisible5] = useState<boolean>(true);
+  const [isVisible6, setIsVisible6] = useState<boolean>(true);
+  const [isVisible7, setIsVisible7] = useState<boolean>(true);
+  const [isVisible8, setIsVisible8] = useState<boolean>(true);
+  const [isVisible9, setIsVisible9] = useState<boolean>(true);
 
   const challenge1Text: string = `Click the button!`;
   const challenge2Text: string = `Click the .... button?`;
@@ -57,6 +57,10 @@ function App() {
       />)}
       {isVisible8 && (<Challenge8
       setIsVisible8={setIsVisible8}
+      setIsVisible9={setIsVisible9}
+      />)}
+      {isVisible9 && (<Challenge9
+      setIsVisible9={setIsVisible9}
       />)}
     </div>
   );

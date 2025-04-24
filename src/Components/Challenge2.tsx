@@ -17,7 +17,7 @@ const Challenge2: React.FC<Challenge2Props> = ({ challenge2Text, setIsVisible2, 
     <div className='challenge-container'>
       <h2>Challenge 2</h2>
       <p>{challenge2Text}</p>
-      <button className="challenge2-btn-style" onClick={handleChallenge2}>Click me!</button>
+      <button className="btn challenge2-btn-style" onClick={handleChallenge2}>Click me!</button>
     </div>
   );
 };
