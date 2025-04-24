@@ -1,29 +1,35 @@
 import React from "react";
-import '../Styles/challenges.css';
+import "../Styles/challenges.css";
 
 interface Challenge1Props {
-    challenge1Text: string;
-    setIsVisible1: React.Dispatch<React.SetStateAction<boolean>>;
-    setIsVisible2: React.Dispatch<React.SetStateAction<boolean>>;
+  challengeText: string;
+  setIsVisible1: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsVisible2: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Challenge1: React.FC<Challenge1Props> = ({
-    challenge1Text,
-    setIsVisible1,
-    setIsVisible2,
+  challengeText,
+  setIsVisible1,
+  setIsVisible2,
 }) => {
-    const handleChallenge1 = (): void => {
-        setIsVisible1(false);
-        setIsVisible2(true);
-    }
-    return (
-        <div className='challenge-container'>
+  const handleChallenge1 = (): void => {
+    setIsVisible1(false);
+    setIsVisible2(true);
+  };
+  return (
+    <div className="challenge-container">
+      <div className="challenge-text-container">
         <h2>Challenge 1</h2>
-        <p>{challenge1Text}</p>
-        <button className="btn challenge1-btn-style" onClick={handleChallenge1}>Click me!</button>
-        </div>
-    )
-}
+        <p>{challengeText}</p>
+      </div>
+      <div className="challenge1-container">
+        <button className="btn challenge1-btn-style" onClick={handleChallenge1}>
+          Click me!
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default Challenge1;
 

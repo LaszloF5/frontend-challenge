@@ -1,11 +1,13 @@
 import React, { useRef } from "react";
 
 interface challenge7Props {
+  challengeText: string;
   setIsVisible7: React.Dispatch<React.SetStateAction<boolean>>;
   setIsVisible8: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Challenge7: React.FC<challenge7Props> = ({
+  challengeText,
   setIsVisible7,
   setIsVisible8
 }) => {
@@ -29,7 +31,10 @@ const Challenge7: React.FC<challenge7Props> = ({
 
   return (
     <div className="challenge-container">
-      <h2>Challenge 7</h2>
+      <div className="challenge-text-container">
+        <h2>Challenge7</h2>
+        <p>{challengeText}</p>
+      </div>
       <div className="challenge7-div">
         {buttons.map((num, i) => (
           <button

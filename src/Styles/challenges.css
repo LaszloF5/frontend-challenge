@@ -13,6 +13,28 @@
   background: linear-gradient(to right, #000000, #0f9b0f);
 }
 
+.challenge-text-container {
+  height: 10vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.challenge1-container,
+.challenge2-container,
+.challenge3-container,
+.challenge4-container,
+.challenge6-container,
+.challenge8-container,
+.challenge9-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn {
   color: black;
 }
@@ -49,7 +71,7 @@
 
 .challenge4-btn-style {
   position: relative;
-  z-index: -1;
+  z-index: -5;
 }
 
 .challenge5-div {
@@ -65,18 +87,17 @@
 
 .challenge6-btn-style {
   position: absolute;
-  left: 1000px;
+  right: 10000px;
 }
 
 .challenge7-div {
-  height: 90%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  overflow-y: scroll;
   cursor: wait;
+  background: linear-gradient(to right, #000000, #0f9b0f);
 }
 
 .challenge7-btn-style {
@@ -84,24 +105,21 @@
   height: 75px;
   margin: 1px;
   cursor: wait;
-  /* filter: blur(10px); */
+  filter: blur(10px);
 }
 
 .other8-btn {
   user-select: none;
-  cursor: not-allowed;
+  cursor: grab;
 }
 
 .challenge8-btn-style {
   visibility: hidden;
+  cursor: not-allowed;
 }
 
 .challenge9-div {
-  height: 90vh;
   cursor: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .inner-div {

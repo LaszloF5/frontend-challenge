@@ -2,11 +2,13 @@ import React from 'react';
 import '../Styles/challenges.css';
 
 interface challenge4Props {
+    challengeText: string;
     setIsVisible4: React.Dispatch<React.SetStateAction<boolean>>;
     setIsVisible5: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Challenge4: React.FC<challenge4Props> = ({
+    challengeText,
     setIsVisible4,
     setIsVisible5
 }) => {
@@ -18,8 +20,11 @@ const Challenge4: React.FC<challenge4Props> = ({
 
     return (
         <div className='challenge-container'>
+        <div className="challenge-text-container">
         <h2>Challenge 4</h2>
-        <div className="challenge4-div">
+        <p>{challengeText}</p>
+      </div>
+        <div className="challenge4-div challenge4-container">
             <button className='btn challenge4-btn-style' onClick={handleChallenge4}>Click me!</button>
             </div>
         </div>
