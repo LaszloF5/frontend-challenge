@@ -321,7 +321,7 @@
   );
   border: 0.1rem double cyan;
   border-radius: 30% 70% 71% 30% / 30% 30% 70% 70%;
-  animation: c10 0.3s infinite linear, spinny 3s infinite linear, tipToe 2s infinite linear, bounces 2s infinite linear;
+  animation: c10 0.3s infinite linear, spinny 3s infinite linear, tipToe 1.5s infinite linear, bounces 2s infinite linear;
   box-shadow: 0 0 0.75rem red, 0 0 1.5rem orange, 0 0 2rem yellow;
   transform: skewX(10deg) rotate(3deg) scale(1.1);
   cursor: none;
@@ -381,23 +381,23 @@
 
 @keyframes bounces {
   0% {
-    top: 0;
+    top: -150px;
     left: 0;
   }
   25% {
-    top: 0;
-    left: 100px;
+    top: -150px;
+    left: 300px;
   }
   50% {
-    top: 100px;
-    left: 200px;
+    top: 150px;
+    left: 300px;
   }
   75% {
-    top: 0;
-    left: 100px;
+    top: 150px;
+    left: 0;
   }
   100% {
-    top: 0;
+    top: -150px;
     left: 0;
   }
 }
