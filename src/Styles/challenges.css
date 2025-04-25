@@ -239,7 +239,7 @@
   height: 75px;
   margin: 0.1rem;
   cursor: wait;
-  /* filter: blur(10px) brightness(0.9); */
+  filter: blur(10px) brightness(0.9);
   font-weight: bolder;
   background: radial-gradient(circle, #00c6ff, #0072ff);
   color: rgb(63, 86, 13);

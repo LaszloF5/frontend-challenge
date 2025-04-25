@@ -12,7 +12,7 @@ import Challenge10 from "./Components/Challenge10";
 import "./App.css";
 
 function App() {
-  const [isVisible1, setIsVisible1] = useState<boolean>(false);
+  const [isVisible1, setIsVisible1] = useState<boolean>(true);
   const [isVisible2, setIsVisible2] = useState<boolean>(false);
   const [isVisible3, setIsVisible3] = useState<boolean>(false);
   const [isVisible4, setIsVisible4] = useState<boolean>(false);
@@ -21,7 +21,7 @@ function App() {
   const [isVisible7, setIsVisible7] = useState<boolean>(false);
   const [isVisible8, setIsVisible8] = useState<boolean>(false);
   const [isVisible9, setIsVisible9] = useState<boolean>(false);
-  const [isVisible10, setIsVisible10] = useState<boolean>(true);
+  const [isVisible10, setIsVisible10] = useState<boolean>(false);
 
   const challengeText: string = `Click the button!`;
   const challenge2Text: string = `Click the .... button?`;

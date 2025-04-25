@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../Styles/challenges.css";
 
 interface Challenge10Props {
@@ -10,6 +10,15 @@ const Challenge10: React.FC<Challenge10Props> = ({
   setIsVisible10,
   challengeText,
 }) => {
+
+  const victoryText: string = 'Congratulations! You solved all challenges successfully!';
+
+  const [isClicked, setIsClicked] = useState<boolean>(true);
+
+  const handleClick = () => {
+    setIsClicked(false);
+  }
+
   return (
     <div className="challenge-container">
       <div className="challenge-text-container">
@@ -17,7 +26,7 @@ const Challenge10: React.FC<Challenge10Props> = ({
         <p>{challengeText}</p>
       </div>
       <div className="challenge10-container">
-        <button className="btn challenge10-btn-style">Click Me!</button>
+        {isClicked ? (<button className="btn challenge10-btn-style" onClick={handleClick}>Click Me!</button>) : victoryText}
       </div>
     </div>
   );
