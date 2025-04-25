@@ -20,7 +20,7 @@ const Challenge5: React.FC<challenge5Props> = ({
     return (
         <div className='challenge-container'>
         <div className="challenge-text-container">
-        <h2>Challenge5</h2>
+        <h2>Challenge 5</h2>
         <p>{challengeText}</p>
       </div>
         <div className="challenge5-div">

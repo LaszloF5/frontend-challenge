@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "../Styles/challenges.css";
 
 interface Challenge8Props {
@@ -12,13 +12,19 @@ const Challenge8: React.FC<Challenge8Props> = ({
   setIsVisible8,
   setIsVisible9,
 }) => {
+
+  const [funnyText, setFunnyText] = useState<boolean>(false);
+
+  const myFunnyText: string = 'clicked-button';
+
+  const handleOtherClick = () => {
+    alert("This is not the right button.");
+    setFunnyText(true);
+  }
+
   const handleChallenge8 = (): void => {
     setIsVisible8(false);
     setIsVisible9(true);
-  };
-
-  const alertClick = () => {
-    alert("This is not the right button.");
   };
 
   return (
@@ -28,7 +34,7 @@ const Challenge8: React.FC<Challenge8Props> = ({
         <p>{challengeText}</p>
       </div>
       <div className="challenge8-container">
-        <button className="btn other8-btn" onClick={alertClick}>
+        <button className={`btn other8-btn ${funnyText ? 'clicked-button' : ''}`} onClick={handleOtherClick}>
           Click me!
         </button>
         <button className="btn challenge8-btn-style" onClick={handleChallenge8}>

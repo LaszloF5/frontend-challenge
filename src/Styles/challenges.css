@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "VT323", "Share Tech Mono", monospace;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: 1px;
   color: whitesmoke;
 }
@@ -21,13 +21,56 @@
   gap: 10px;
 }
 
-.challenge1-container,
-.challenge2-container,
-.challenge3-container,
-.challenge4-container,
-.challenge6-container,
-.challenge8-container,
+.challenge1-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.challenge2-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.challenge3-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.challenge4-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.challenge6-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.challenge8-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .challenge9-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.challenge10-container {
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -40,11 +83,47 @@
 }
 
 .challenge1-btn-style {
+  padding: 0.5rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 1px;
+  border-radius: 0.2rem;
   pointer-events: none;
+  animation: c1 2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: none;
+  background-color: whitesmoke;
+  color: black;
+}
+
+@keyframes c1 {
+  0% {
+    background-color: whitesmoke;
+  }
+  50% {
+    background-color: #000000;
+    color: whitesmoke;
+  }
+  100% {
+    background-color: whitesmoke;
+  }
 }
 
 .challenge2-btn-style {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-style: oblique;
+  margin: 0.2rem;
+  border-radius: 0.2rem;
+  letter-spacing: 0.1rem;
   visibility: hidden;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  border: 2px solid #ffff;
+  filter: brightness(0.8) contrast(1.2);
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 0 0.5rem rgba(255, 255, 255, 0.2),
+    0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
 .challenge3-div {
@@ -52,14 +131,24 @@
 }
 
 .challenge3-btn-style {
+  padding: 0.7rem 1.5rem;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  background-color: #223;
+  color: lime;
+  border: 2px dashed lime;
   display: none;
+  text-transform: capitalize;
+  text-shadow: 1px 1px #000;
+  border-radius: 0.3rem;
+  transform: rotateZ(200deg);
+  box-shadow: 00 0.2rem limegreen;
 }
 
 .challenge4-div {
   width: 100%;
   height: 90%;
   position: relative;
-  z-index: 2;
 }
 
 .challenge4-div::after {
@@ -71,12 +160,48 @@
 
 .challenge4-btn-style {
   position: relative;
+  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5f5;
+  border: none;
   z-index: -5;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  filter: sepia(0.6) grayscale(0.3);
+  color: #666;
+  animation: c4 1s infinite;
+}
+
+@keyframes c4 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .challenge5-div {
   height: 0;
   overflow: hidden;
+}
+
+.challenge5-btn-style {
+  height: 2rem;
+  width: 8rem;
+  overflow: hidden;
+  background: linear-gradient(90deg, #f12711, #f5af19);
+  border: 0;
+  border-radius: 2rem;
+  color: white;
+  transform: translateY(-2rem);
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #000;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
 }
 
 .challenge6-div {
@@ -87,7 +212,16 @@
 
 .challenge6-btn-style {
   position: absolute;
+  background-color: #ffecd2;
+  background-image: linear-gradient(315deg, #ffecd2 0%, #fcb69f 74%);
+  color: #333;
+  padding: 1rem;
   right: 10000px;
+  box-shadow: inset 2px 3px 4px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  font-style: italic;
+  border: 1px solid #989;
+  transform: rotate(2deg);
 }
 
 .challenge7-div {
@@ -103,19 +237,52 @@
 .challenge7-btn-style {
   width: 100px;
   height: 75px;
-  margin: 1px;
+  margin: 0.1rem;
   cursor: wait;
-  filter: blur(10px);
+  /* filter: blur(10px) brightness(0.9); */
+  font-weight: bolder;
+  background: radial-gradient(circle, #00c6ff, #0072ff);
+  color: rgb(63, 86, 13);
+  border: 0.1rem dotted green;
+  border-radius: 0.1rem;
+  text-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.2);
+  transition: filter(0.3s ease-in);
 }
 
 .other8-btn {
   user-select: none;
   cursor: grab;
+  background-color: #6a11cb;
+  padding: 0.5rem 1rem;
+  color: yellow;
+  border: 5px dotted yellow;
+  text-overflow: clip;
+  border-radius: 0.3rem;
+  width: 9rem;
+  height: 4rem;
+}
+
+.clicked-button {
+  width: 99%;
+  height: 99%;
 }
 
 .challenge8-btn-style {
   visibility: hidden;
   cursor: not-allowed;
+  background-color: #2575fc;
+  color: #ecf0f1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(63, 86, 13, 0.5);
+  text-transform: lowercase;
+  font-variant: small-caps;
+  transform: skewX(-5deg);
+  z-index: -2;
+  position: absolute;
+  top: 50%;
+  left: 10%;
 }
 
 .challenge9-div {
@@ -128,4 +295,109 @@
 
 .challenge9-btn-style {
   pointer-events: none;
+  padding: 0.25rem 0.5rem;
+  color: #8db1b9;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: "Roboto Mono", monospace;
+  backdrop-filter: blur(2px);
+  mix-blend-mode: luminosity;
+  transition: all 0.2s ease-in;
+}
+
+.challenge10-btn-style {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-transform: uppercase;
+  color: lime;
+  background: repeating-linear-gradient(
+    45deg,
+    magenta,
+    magenta 10px,
+    yellow 10px,
+    yellow 20px
+  );
+  border: 0.1rem double cyan;
+  border-radius: 30% 70% 71% 30% / 30% 30% 70% 70%;
+  animation: c10 0.3s infinite linear, spinny 3s infinite linear, tipToe 2s infinite linear, bounces 2s infinite linear;
+  box-shadow: 0 0 0.75rem red, 0 0 1.5rem orange, 0 0 2rem yellow;
+  transform: skewX(10deg) rotate(3deg) scale(1.1);
+  cursor: none;
+  user-select: text;
+  text-shadow: 0.1rem 0.1rem 0px black;
+}
+
+@keyframes c10 {
+  0% {
+    color: lime;
+    background-color: hotpink;
+  }
+  25% {
+    color: cyan;
+    background-color: orange;
+  }
+  50% {
+    color: magenta;
+    background-color: yellow;
+  }
+  75% {
+    color: white;
+    background-color: red;
+  }
+  100% {
+    color: lime;
+    background-color: hotpink;
+  }
+}
+
+@keyframes spinny {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(300deg);
+  }
+}
+
+@keyframes tipToe {
+  0% {
+    transform: scaleY(0) scale(1);
+  }
+  25% {
+    transform: scaleY(-4px) scale(1.01);
+  }
+  50% {
+    transform: scaleY(0) scale(1);
+  }
+  75% {
+    transform: scaleY(-2px) scale(0.99);
+  }
+  0% {
+    transform: scaleY(0) scale(1);
+  }
+}
+
+@keyframes bounces {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 100px;
+  }
+  50% {
+    top: 100px;
+    left: 200px;
+  }
+  75% {
+    top: 0;
+    left: 100px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
 }

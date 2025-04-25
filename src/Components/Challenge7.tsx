@@ -2,12 +2,14 @@ import React, { useRef } from "react";
 
 interface challenge7Props {
   challengeText: string;
+  setIsVisible6: React.Dispatch<React.SetStateAction<boolean>>;
   setIsVisible7: React.Dispatch<React.SetStateAction<boolean>>;
   setIsVisible8: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Challenge7: React.FC<challenge7Props> = ({
   challengeText,
+  setIsVisible6,
   setIsVisible7,
   setIsVisible8
 }) => {
@@ -15,6 +17,12 @@ const Challenge7: React.FC<challenge7Props> = ({
     const buttonRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   const buttons = Array.from({ length: 250 }, (_, i) => i + 1);
+
+  const handleDontClick = () => {
+    alert('I warned you!');
+    setIsVisible6(true);
+    setIsVisible7(false);
+  }
 
   const handleChallenge7 = (i: number) => {
     const el = buttonRefs.current[i];
@@ -32,7 +40,7 @@ const Challenge7: React.FC<challenge7Props> = ({
   return (
     <div className="challenge-container">
       <div className="challenge-text-container">
-        <h2>Challenge7</h2>
+        <h2>Challenge 7</h2>
         <p>{challengeText}</p>
       </div>
       <div className="challenge7-div">
@@ -44,6 +52,9 @@ const Challenge7: React.FC<challenge7Props> = ({
           onClick={() => {
             if (i === 200) {
               handleChallenge7(i);
+            } else {
+              alert('I told you...');
+              handleDontClick();
             }
           }}
         >

@@ -8,10 +8,11 @@ import Challenge6 from "./Components/Challenge6";
 import Challenge7 from "./Components/Challenge7";
 import Challenge8 from "./Components/Challenge8";
 import Challenge9 from "./Components/Challenge9";
+import Challenge10 from "./Components/Challenge10";
 import "./App.css";
 
 function App() {
-  const [isVisible1, setIsVisible1] = useState<boolean>(true);
+  const [isVisible1, setIsVisible1] = useState<boolean>(false);
   const [isVisible2, setIsVisible2] = useState<boolean>(false);
   const [isVisible3, setIsVisible3] = useState<boolean>(false);
   const [isVisible4, setIsVisible4] = useState<boolean>(false);
@@ -20,6 +21,7 @@ function App() {
   const [isVisible7, setIsVisible7] = useState<boolean>(false);
   const [isVisible8, setIsVisible8] = useState<boolean>(false);
   const [isVisible9, setIsVisible9] = useState<boolean>(false);
+  const [isVisible10, setIsVisible10] = useState<boolean>(true);
 
   const challengeText: string = `Click the button!`;
   const challenge2Text: string = `Click the .... button?`;
@@ -69,6 +71,7 @@ function App() {
       )}
       {isVisible7 && (
         <Challenge7
+          setIsVisible6={setIsVisible6}
           challengeText={challengeText}
           setIsVisible7={setIsVisible7}
           setIsVisible8={setIsVisible8}
@@ -84,6 +87,13 @@ function App() {
       {isVisible9 && (
         <Challenge9
           setIsVisible9={setIsVisible9}
+          setIsVisible10={setIsVisible10}
+          challengeText={challengeText}
+        />
+      )}
+      {isVisible10 && (
+        <Challenge10
+          setIsVisible10={setIsVisible10}
           challengeText={challengeText}
         />
       )}
@@ -93,6 +103,6 @@ function App() {
 
 export default App;
 
-//challenge4 buggos
+// Ha a 7. challenge-nél a dont click me re rákattint, dobja vissza 1 feladatot.
 
 //tesztelni
